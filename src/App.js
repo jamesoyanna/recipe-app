@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useEffect, useState} from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App= ()=>{
+  const APP_ID = "c4bc1cdf";
+  const APP_KEY = "ed0a4a62db6f0213ccf2c579e4aedcb6";
+ 
+useEffect(()=>{
+  
+}, []);
+
+const getRecipes = async()=>{
+const response = await fetch(`https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}`);
+const data = await response.json();
+console.log(data);
 }
+
+
+  return(
+    <div className="App">
+    <form className="search-form">
+    <input className="search-bar" type="text"></input>
+    <button className="search-button" type="submit">Search</button>
+    </form>
+    <h1 onClick={()=> setCounter(counter + 1)}>{counter}</h1>
+    </div>
+  )}
 
 export default App;
