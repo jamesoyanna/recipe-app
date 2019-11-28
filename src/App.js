@@ -28,8 +28,10 @@ console.log(data.hits);
     </form>
     
     {recipes.map(recipe=>(
-      <Recipe  title={recipe.recipe.title} calories={recipe.recipe.calories}
-      image={recipe,recipe.image}
+    <Recipe
+          title={recipe.recipe.title}
+          calories={recipe.recipe.calories}
+          image={recipe.recipe.image}
       />
     ))}
     </div>
