@@ -1,4 +1,5 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This app is a recipe app that displays difference recipes of food. 
+It is built with react.
 
 ## Available Scripts
 
